@@ -1,3 +1,4 @@
+// 1.
 function getQueryVariable(variable) {
   var query = window.location.search.substring(1)
   var vars = query.split("&")
@@ -10,3 +11,8 @@ function getQueryVariable(variable) {
   return false
 }
 getQueryVariable('路径参数')
+
+// 2.
+const q = {};
+location.search.replace(/([^?&=]+)=([^&]+)/g,(_,k,v)=>q[k]=v);
+console.log(q); 
