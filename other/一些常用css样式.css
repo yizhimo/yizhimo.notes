@@ -9,3 +9,22 @@
   z-index: 999;
 }
 
+/* 浮动相关 */
+.f-clear {
+  clear: both;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+/* 万能清除浮动 */
+.f-clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
