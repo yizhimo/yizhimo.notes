@@ -28,3 +28,24 @@
   clear: both;
   height: 0;
 }
+
+/* 歌词填充效果 */
+@keyframes scan {
+  0% {
+    background-size:0 100%;
+  }
+  100% {
+    background-size:100% 100%;
+  }
+}
+.text-load {
+  display: inline-block;
+  background:#222 -webkit-linear-gradient(left, red, red) no-repeat 0 0;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  -webkit-background-clip:text;
+  background-size:0 100%;
+  
+  background-size:100% 100%;
+  animation: scan 5s linear;
+}
