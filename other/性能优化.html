@@ -7,15 +7,27 @@
   <title>性能优化</title>
 </head>
 <body>
-  <h1>总结</h1>
-  <div>
-    <p>1.使用事件委托(事件代理)</p>
-  </div>
+  <h1>前端性能优化随笔</h1>
 
   <div>
     1.使用事件委托(事件代理)
     (动态绑定事件，减少重复绑定事件工作，减少页面所需内存)
     (适合事件委托的事件有：click，mousedown，mouseup，keydown，keyup，keypress)
+  </div>
+  <div>
+    2.预加载
+    `link rel="preload" href="style.css" as="style"`(as属性可以指定预加载的类型，除了style还支持很多类型，常用的一般是style和script)
+    (prefetch: 通常用在这个资源可能会在用户接下来访问的页面中出现的时候)
+    `script src="main.js" async`(当js下载完成后会立即(尽快)执行，多条js可以并行下载)
+    `script src="main.js" defer`(会等待解析完整HTML之后在开始执行，而且多条defer标记的js会按照顺序执行)
+  </div>
+  <div>
+    3.图片视频等采用懒加载，缓存，OSS等等
+  </div>
+  <div>
+    4.Tree-shaking
+    例子：lodash默认是CommonJS的形式，使用常规的方法import { cloneDeep } from 'lodash'导入后，webpack会把整个lodash打包进来
+    可以：import cloneDeep from 'lodash/cloneDeep'或者import { cloneDeep } from 'lodash-es'
   </div>
 
 </body>
