@@ -1,5 +1,4 @@
 // call
-// 给所有的函数添加一个ycall的方法
 Function.prototype.ycall = function(thisArg, ...args) {
   // 在这里可以去执行调用的那个函数(foo)
   // 问题: 得可以获取到是哪一个函数执行了ycall
