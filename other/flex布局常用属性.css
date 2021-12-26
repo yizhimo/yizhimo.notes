@@ -1,3 +1,4 @@
 .box {
+  /* 开启flex布局 */
   display: flex;
 }
