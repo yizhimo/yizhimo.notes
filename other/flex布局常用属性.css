@@ -1,4 +1,16 @@
 .box {
   /* 开启flex布局 */
   display: flex;
+  display: inline-flex;  /* 行内元素 */
+  /* 横轴 */
+  justify-content: center;  /* 居中对齐 */
+  justify-content: space-between;  /* 两侧对齐 */
+  justify-content: space-evenly;  /* 均分对齐 */
+  justify-content: space-around;  /* 环绕对齐 (中间间距是两侧的两倍)*/
+  /* 纵轴 */
+  align-items: center;  /* 居中对齐 */
+  align-items: flex-start;  /* 顶部对齐 */
+  align-items: flex-end;  /* 底部对齐 */
+  /* 横轴与纵轴互换 */
+  flex-direction: column;
 }
