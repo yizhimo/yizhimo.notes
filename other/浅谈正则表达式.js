@@ -25,6 +25,12 @@ console.log(reg.test('hello'))   // false
 console.log(reg.test('hello1'))  // true
 console.log(reg.test('1hello'))  // true
 console.log(reg.test('hel2lo'))  // true
+// 手机号隐藏
+function telHideCenter(val) {
+    var reg = /^(\d{3})\d{4}(\d{4})$/
+    val = val.replace(reg, '$1****$2')
+    return val
+}
 
 // 范围表示  [123456abcdefABCDEF] => [1-6a-fA-F]
 // \d  // 数字
