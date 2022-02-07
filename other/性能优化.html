@@ -29,6 +29,25 @@
     例子：lodash默认是CommonJS的形式，使用常规的方法import { cloneDeep } from 'lodash'导入后，webpack会把整个lodash打包进来
     可以：import cloneDeep from 'lodash/cloneDeep'或者import { cloneDeep } from 'lodash-es'
   </div>
+  <div>
+    5.前端DNS缓存
+    在html页面头部写入dns缓存地址,如：
+    <!-- <meta http-equiv="x-dns-prefetch-control" content="on" /> -->
+    <!-- <link rel="dns-prefetch" href="http://bdimg.share.baidu.com" /> -->
+  </div>
+  <div>
+    6.页面渲染优化
+    HTML文档结构层次尽量少，最好不深于六层；
+    脚本尽量后放，放在前即可；
+    少量首屏样式内联放在标签内；
+    样式结构层次尽量简单；
+    在脚本中尽量减少DOM操作，尽量缓存访问DOM的样式信息，避免过度触发回流；
+    减少通过JavaScript代码修改元素样式，尽量使用修改class名方式操作样式或动画；
+    动画尽量使用在绝对定位或固定定位的元素上；
+    隐藏在屏幕外，或在页面滚动时，尽量停止动画；
+    尽量缓存DOM查找，查找器尽量简洁；
+    涉及多域名的网站，可以开启域名预解析
+  </div>
 
 </body>
 </html>
