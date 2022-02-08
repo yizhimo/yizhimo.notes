@@ -29,6 +29,31 @@
   height: 0;
 }
 
+/* 单行打点 */
+.line-clamp {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 两行打点 */
+.line-clamp-2,
+.line-clamp-3,
+.line-clamp-4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 三行打点 */
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+/* 四行打点 */
+.line-clamp-4 {
+  -webkit-line-clamp: 4;
+}
+
 /* 歌词填充效果 */
 @keyframes scan {
   0% {

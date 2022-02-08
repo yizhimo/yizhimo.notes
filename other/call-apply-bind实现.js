@@ -23,6 +23,7 @@ function test1(num1, num2) {
 var callResult = test1.ycall("abc", 20, 30)
 console.log('callResult', callResult)
 
+
 // apply
 Function.prototype.yapply = function(thisArg, argArray) {
   // 1.获取到要执行的函数
@@ -47,6 +48,7 @@ function test2(num1, num2) {
 }
 var applyResult = test2.yapply("abc", 20, 30)
 console.log('applyResult', applyResult)
+
 
 // bind
 Function.prototype.ybind = function(thisArg, ...argArray) {
