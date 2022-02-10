@@ -46,7 +46,7 @@ function test2(num1, num2) {
   console.log("test2函数被执行", this, num1, num2)
   return num1 + num2
 }
-var applyResult = test2.yapply("abc", 20, 30)
+var applyResult = test2.yapply("abc", [20, 30])
 console.log('applyResult', applyResult)
 
 
