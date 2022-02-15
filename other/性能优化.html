@@ -48,6 +48,10 @@
     尽量缓存DOM查找，查找器尽量简洁；
     涉及多域名的网站，可以开启域名预解析
   </div>
+  <div>
+    7.页面的定时器动画可以用requestAnimationFrame函数来优化；
+    要求浏览器在下次重绘之前调用指定的回调函数更新动画，若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用window.requestAnimationFrame()
+  </div>
 
 </body>
 </html>
