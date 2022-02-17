@@ -64,3 +64,27 @@
 
 // useCallback/useMemo区别
 // useCallback对传入的回调函数优化；useMemo对传入的值优化(可以是任何类型)
+
+// useRef
+// const titleRef = useRef()
+// function changeDom() {
+//   titleRef.current.innerHTML = 'yzm'
+// }
+// <button onClick={e => changeDom()}></button>
+// 组件绑定ref的话必须是类组件
+// useRef()里传入值的话就是current当前值 但是在整个生命周期里不会改变
+
+// useImperativeHandle
+// 传进来的ref通过forwardRef包裹函数
+// useImperativeHandle(父组件传给子组件的ref, () => ({
+//   // 现在current返回的就是当前对象，只暴露当前对象里的东西
+//   focus: () => {
+//      inputRef.current.focus()
+//   }
+// }), [inputRef])
+
+// useLayoutEffect
+// useLayoutEffect是在渲染更新到dom之前执行，会阻塞dom更新；useEffect是在之后，不会阻塞
+
+// 自定义hook
+// 公共代码逻辑抽取，但函数命名前面必须加上use，这样才能在函数里使用hooks
