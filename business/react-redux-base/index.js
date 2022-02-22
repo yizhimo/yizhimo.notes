@@ -20,3 +20,7 @@ store.dispatch(subAction(5));
 store.dispatch(incAction());
 store.dispatch(decAction());
 
+
+// redux
+// 核心理念: store reducer action
+// 三大原则: 1.单一数据源；2.state是只读的；3.进行修改必须使用纯函数
